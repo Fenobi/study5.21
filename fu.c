@@ -174,41 +174,41 @@
 //}
 //
 
-//int main()
-//{
-//    int a1[] = { 9,1,4,2,3,6,5,8,7,10 };
-//    int a2[10] = { 0 };
-//    int i = 0, j = 1;
-//    int n = sizeof(a1) / sizeof(a1[0]);
-//    int left = 0;
-//    int right = n - 1;
-//    for (i = 0; i < n; i++)
-//    {
-//        for (j = 0; j < n - i - 1; j++)
-//        {
-//            if (a1[j] > a1[j + 1])
-//            {
-//                int tmp = a1[j];
-//                a1[j] = a1[j + 1];
-//                a1[j + 1] = tmp;
-//            }
-//        }
-//    }
-//   for(i=0;i<n-1;i+=2)
-//    {
-//       a2[i] = a1[left];
-//       a2[i+1] = a1[right];
-//       left++;
-//       right--;
-//       
-//    }
-//   if (i == n - 1)
-//   {
-//       a2[i] = a1[left];
-//   }
-//    for (i = 0; i < n; i++)
-//    {
-//        printf("%d ", a2[i]);
-//    }
-//    return 0;
-//}
+int main()
+{
+    int a1[] = { 9,1,4,2,3,6,5,8,7 };
+    int a2[9] = { 0 };
+    int i = 0, j = 1;
+    int n = sizeof(a1) / sizeof(a1[0]);
+    int left = 0;
+    int right = n - 1;
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n - i - 1; j++)
+        {
+            if (a1[j] > a1[j + 1])
+            {
+                int tmp = a1[j];
+                a1[j] = a1[j + 1];
+                a1[j + 1] = tmp;
+            }
+        }
+    }
+   for(i=0;i<n-1;i+=2)
+    {
+       a2[i] = a1[left];
+       a2[i+1] = a1[right];
+       left++;
+       right--;
+       
+    }
+   if (i == n - 1)
+   {
+       a2[i] = a1[left];
+   }
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", a2[i]);
+    }
+    return 0;
+}
